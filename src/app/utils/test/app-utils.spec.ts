@@ -13,18 +13,9 @@ const referenceOutput1 = [
 ];
 
 const referenceOutput2 = [
-    { count: 1, note: 500 },
-    { count: 0, note: 200 },
-    { count: 1, note: 100 },
-    { count: 1, note: 50 },
-    { count: 0, note: 20 },
-    { count: 0, note: 10 }
-];
-
-const referenceEmptyOutput = [
-    { count: 0, note: 500 },
+    { count: 3, note: 200 },
     { count: 0, note: 100 },
-    { count: 0, note: 50 },
+    { count: 1, note: 50 },
     { count: 0, note: 20 },
     { count: 0, note: 10 }
 ];
@@ -59,6 +50,6 @@ it('dispencer function returns undefined for an invalid string', () => {
 it('returns proper array and counts for proper input', () => {
     resultArray = calculateNoteDispense('1100');
     expect(resultArray).toEqual(referenceOutput1);
-    resultArray = calculateNoteDispense('650');
+    resultArray = calculateNoteDispense('650', '200');
     expect(resultArray).toEqual(referenceOutput2);
 });
