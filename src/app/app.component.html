@@ -1,6 +1,3 @@
-<section class="heading-section">
-  <h1>{{title}}</h1>
-  <h4>Remaining Balance for this session : {{ remBalance | currency:'INR':'symbol-narrow':'4.2-2'}}</h4>
-</section>
+<app-header-section [title]="title" [remBalance]="remBalance"></app-header-section>
 <app-atm-form (submitHandler)="calculate($event)" [formError]="errorText"></app-atm-form>
 <app-note-detail [resultArray]="resultArray"></app-note-detail>

@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AtmFormComponent } from './components/atm-form/atm-form.component';
 import { NoteDetailComponent } from './components/note-detail/note-detail.component';
+import { HeaderSectionComponent } from './components/header-section/header-section.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AtmFormComponent,
-    NoteDetailComponent
+    NoteDetailComponent,
+    HeaderSectionComponent
   ],
   imports: [
     BrowserModule,
