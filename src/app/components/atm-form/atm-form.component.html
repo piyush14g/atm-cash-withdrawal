@@ -1,0 +1,18 @@
+<form class="form-wrapper" [formGroup]="atmForm" (ngSubmit)="onSubmit()">
+    <p *ngIf="formError" class="error-text"> {{ formError }} </p>
+    <div class="form-group">
+        <input placeholder="Enter Amount to Withdraw" class="amount" type="number" name="amount" step="10"
+            formControlName="amount">
+    </div>
+
+    <div class="form-group">
+        <label>Select Preferred Denomination: (Optional)</label>
+        <div *ngFor="let value of denominations">
+            <input type="radio" [value]="value" formControlName="denomination">
+            <label>{{value}}</label>
+        </div>
+    </div>
+
+    <button class="btn-primary" type="submit" [disabled]="atmForm.invalid">Withdraw</button>
+    <button type="reset" (click)="atmForm.reset();formError='';">Reset</button>
+</form>

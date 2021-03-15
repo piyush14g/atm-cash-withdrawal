@@ -1,0 +1,6 @@
+<section class="result" *ngIf="resultArray">
+    <h2>Notes Dispensed</h2>
+<div *ngFor="let value of resultArray">
+    <span>{{value?.count}} note(s) of Rs.{{value?.note}}</span>
+</div>
+</section>

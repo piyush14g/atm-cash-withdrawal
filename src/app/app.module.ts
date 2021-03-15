@@ -3,14 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AtmFormComponent } from './components/atm-form/atm-form.component';
+import { NoteDetailComponent } from './components/note-detail/note-detail.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AtmFormComponent,
+    NoteDetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
